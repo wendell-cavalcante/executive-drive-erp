@@ -9,6 +9,7 @@ const bankData = { // reutizable object for bank data for drivers
 export const drivers = pgTable("drivers", {
     id: uuid().primaryKey().defaultRandom(),
     type: varchar('type', { length: 20 }).notNull(), //CLT, PJ, Autonomo
+    
     cnh: varchar('cnh', { length: 20 }).notNull().unique(),
     cpf: varchar('cpf', { length: 14 }).notNull().unique(),
     ...bankData
