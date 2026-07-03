@@ -1,10 +1,10 @@
 import { defineConfig } from 'drizzle-kit';
 
 export default defineConfig({
-  schema: './src/modules/**/schema/*.schema.ts', 
+  schema: './src/**/*.schema.ts', 
   out: './drizzle', 
   dialect: 'postgresql', 
   dbCredentials: {
-    url: 'postgresql://postgres:postgres@localhost:5432/executive_drive', //URL for the connection to the database
+    url: 'postgresql://postgres:postgres@localhost:5432/executive_drive', // URL de conexão local com o banco
   },
 });
