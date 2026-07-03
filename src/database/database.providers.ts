@@ -10,7 +10,9 @@ export const databaseProviders = [
       const pool = new Pool({
         connectionString: 'postgresql://postgres:postgres@localhost:5432/executive_drive',
       });
-      return drizzle(pool);
+      
+      // Ajustado para o formato aceito pelas versões mais novas do Drizzle ORM
+      return drizzle({ client: pool });
     },
   },
 ];
